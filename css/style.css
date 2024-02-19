@@ -143,6 +143,29 @@ html::-webkit-scrollbar-thumb{
    height: 300rem;
  }
 
+ /* bottom navbar styling */
+
+ .bottom-navbar{
+   text-align: center;
+   background: var(--green);
+   position: fixed;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   z-index: 1000;
+   display: none;
+ }
+
+ .bottom-navbar a{
+ font-size: 2.5rem;
+ padding: 2rem;
+ color: #fff;
+ }
+
+ .bottom-navbar a:hover{
+   background: var(--dark-color);
+ }
+
  /* media-queries */
  @media(max-width:991px){
    html{
@@ -155,8 +178,20 @@ html::-webkit-scrollbar-thumb{
  }
 
  @media(max-width:768px){
+
+   html{
+      scroll-padding-top: 0;
+   }
+
+   body{
+      padding-bottom: 6rem;
+   }
    .header .header-2{
       display: none;
+   }
+
+   .bottom-navbar{
+      display: block;
    }
 
    #search-btn{
